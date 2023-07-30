@@ -1,0 +1,212 @@
+name: Eike Steffen Kohlmeyer
+jobTitle: Machine Learning Engineer
+location: Munich, Germany
+about: >
+  I am a passionate Machine Learning Engineer with a strong background in computer science and data
+  analysis. I have experience in developing and deploying machine learning models for various
+  applications,
+  including natural language processing, computer vision, and recommendation systems.
+  My goal is to use my skills and expertise to solve complex problems and deliver high-quality solutions
+  to clients and businesses.
+contacts:
+  email: ekohlmeyer21@gmail.com
+  linkedin: https://www.linkedin.com/in/eike-steffen-kohlmeyer-4a0765138/
+  github: https://github.com/EikeKohl
+  website: https://kohlmeyer-ai.com
+  medium: https://medium.com/@EKohlmeyer
+
+technologies:
+  - python
+  - sql
+  - scikit-learn
+  - numpy
+  - pandas
+  - tensorflow
+  - pytorch
+  - git
+  - docker
+  - linux
+  - aws
+  - azure
+  - dbt
+  - deepspeed
+  - openai
+  - haystack
+  - langchain
+
+experience:
+  - title: Freelancer
+    company: self employed
+    location: Munich, Germany
+    start: 06.2023
+    end: present
+    description: kohlmeyer-ai.com
+  - title: Machine Learning Engineer
+    company: SCAILEX GmbH
+    location: Munich, Germany
+    start: 12.2021
+    end: 08.2023
+    description: >
+      I am responsible for the complete MLOps lifecycle including training.
+      In this position, I was able to develop my skillset as a machine
+      learning practitioner as well as a software engineer. Please refer to
+      the "Projects" section for relevant projects and technologies used.
+  - title: Data Scientist
+    company: Atruvia AG
+    location: Munich, Germany
+    start: 12.2020
+    end: 11.2021
+    description: >
+      As a Data Scientist at an IT Service Provider for banks, I developed
+      DL / ML applications in a banking context. Please refer to the
+      "Projects" section for relevant projects and technologies used.
+  - title: Auditor Banks & Asset Management
+    company: KPMG AG
+    location: Zurich, Switzerland
+    start: 10.2018
+    end: 12.2018
+    description: ""
+  - title: Trainee Audit Asset Management
+    company: KPMG Société coopérative
+    location: Luxembourg, Luxembourg
+    start: 02.2018
+    end: 08.2018
+    description: ""
+
+education:
+  - degree: Business Analytics M.Sc.
+    university: Hochschule Düsseldorf
+    description: "Grade: 1.5"
+    start: 2019
+    end: 2020
+    icon: ""
+  - degree: Finance, Accounting, Controlling, and Taxes B.Sc.
+    university: Fachhochschule Dortmund
+    description: "Grade: 1.4"
+    start: 2014
+    end: 2018
+    icon: ""
+
+languages:
+  - German
+  - English
+
+certificates:
+  - name: MLOps Engineering for Production
+    issued_by: Coursera
+  - name: Specialization NLP
+    issued_by: Coursera
+  - name: Deep Learning Specialization
+    issued_by: Coursera
+  - name: Tensorflow Developer
+    issued_by: Google
+  - name: Tensorflow Advanced Techniques
+    issued_by: Coursera
+  - name: Azure Data Scientist Associate
+    issued_by: Microsoft
+
+projects:
+  - title: Information Retrieval
+    abstract: Short description of Project 1
+    description: >
+      I have developed multiple Information Retrieval pipelines that utilize a vectorized knowledge database 
+      to enhance LLM prompts, such as those used in ChatGPT, with contextual information, resulting in 
+      personalized and fact-based chatbot interactions. These pipelines have been successfully applied to 
+      various use cases, including automated communication with clients and courts, leveraging case-specific 
+      information for a legaltech company. Additionally, I have created a Document query engine, as showcased 
+      in a GitHub repository and a Medium blog post, which enables users to perform queries on their own 
+      unstructured text databases. Both services have been deployed on AWS, utilizing terraform Infrastructure 
+      as Code to ensure authentication, load balancing, and other essential features are implemented effectively.
+    categories:
+      - Web Application
+      - Machine Learning
+      - LLM
+      - Retrieval Augmented Generation
+      - CICD
+    techStack:
+      - HuggingFace
+      - Streamlit
+      - OpenAI
+      - Azure
+      - LangChain
+      - HayStack
+      - Terraform
+    duration: 3 months
+    githubLink: https://github.com/EikeKohl/paperqa-web-app
+    mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
+    image: src/assets/BusinessCasual.jpg
+  - title: AI Lawyer
+    abstract: Short description of Project 2
+    description: >
+      Research and prototyping for an instruction-based, German LLM using RLHF, capable of:
+      - Understanding legal cases
+      - Identying applicable legal contexts
+      - Autonomously asking questions to obtain information relevant to the claim
+      This project included mult-node, multi-GPU training of LLMs on AWS & Azure. 
+      Throughout this project I had to read, comprehend, and implement multiple 
+      state-of-the-art Machine Learning papers.
+    categories:
+      - LLM
+      - RLHF
+      - Machine Learning
+    techStack:
+      - AWS
+      - Huggingface
+      - PyTorch
+      - DeepSpeed
+      - OpenAI
+      - Sagemaker
+      - Azure
+    duration: 3 months
+    image: src/assets/BusinessCasual.jpg
+  - title: Document Classification
+    abstract: Short description of Project 2
+    description: >
+      As a Machine Learning Engineer, I’ve trained, evaluated, and
+      deployed document classification models for SCAILEX and its SaaS
+      platform handling 500,000+ annual documents from various sources.
+      Using SWEM and transformers-based approaches, we achieved a
+      60% automation rate with 95% accuracy. Model training experiments
+      were conducted on Sagemaker and tracked in MLflow for efficient
+      development.
+    categories:
+      - Machine Learning
+      - CICD
+      - MLOps
+    techStack:
+      - AWS
+      - Huggingface
+      - PyTorch
+      - Lambda
+      - MLflow
+      - Sagemaker
+      - GitLab
+    duration: 1.5 years
+    image: src/assets/BusinessCasual.jpg
+  - title: Information Extraction
+    abstract: Short description of Project 2
+    description: >
+      Training, evaluation, deployment, and monitoring of information
+      extraction models. In the context of the legal domain, this involves
+      Named Entity Recognition (NER) of pertinent details from client,
+      court, and insurance correspondence. To achieve this, I utilized
+      transformers-based architectures and a BiLSTM-CRF ensemble
+      model approach. Additionally, my team and I developed an Optical
+      Character Recognition model to extract information from images sent
+      by customers, employing a YOLOv5 + TrOCR model ensemble.
+      Experiments for model training were conducted on Sagemaker and
+      tracked in MLflow.
+    categories:
+      - Machine Learning
+      - CICD
+      - MLOps
+    techStack:
+      - AWS
+      - Huggingface
+      - PyTorch
+      - Lambda
+      - MLflow
+      - Sagemaker
+      - GitLab
+    duration: 1.5 years
+    image: src/assets/BusinessCasual.jpg

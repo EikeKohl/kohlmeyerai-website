@@ -1,0 +1,10 @@
+# Set text as the default type for all files
+* text=auto
+
+# Specify that all code & configuration files should have LF endings
+*.js text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.vue text eol=lf
