@@ -54,7 +54,7 @@
         target="_blank"
         icon
       >
-        <v-icon left>mdi-github</v-icon>
+        <v-icon left>fa-brands fa-github</v-icon>
       </v-btn>
       <v-btn
         v-if="project.mediumLink"
@@ -62,7 +62,7 @@
         target="_blank"
         icon
       >
-        <v-icon left>mdi-medium</v-icon>
+        <v-icon left>fa-brands fa-medium</v-icon>
       </v-btn>
     </v-card-actions>
     <!--Full Description-->

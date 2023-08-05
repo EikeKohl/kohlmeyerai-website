@@ -4,6 +4,30 @@ import BaseLayout from "@/layouts/default/BaseLayout";
 
 <template>
   <BaseLayout>
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="1">
+          <v-btn
+            variant="tonal"
+            size="x-large"
+            href="src/assets/ai-lawyer.png"
+            target="_blank"
+            icon="fa-regular fa-file-word"
+            color="#185ABD"
+          />
+        </v-col>
+        <v-col cols="1">
+          <v-btn
+            variant="tonal"
+            size="x-large"
+            href="src/assets/ai-lawyer.png"
+            target="_blank"
+            icon="fa-regular fa-file-pdf"
+            color="#B30B00"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
     <v-container class="py-6">
       <v-row>
         <v-col cols="12" md="8">

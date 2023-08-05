@@ -20,7 +20,7 @@
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "@mdi/font": "^7.2.96",
     "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@vitejs/plugin-vue": "^4.0.0",

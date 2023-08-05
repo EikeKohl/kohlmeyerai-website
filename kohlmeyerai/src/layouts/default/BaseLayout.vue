@@ -50,17 +50,20 @@ export default {
       // Wait until profile data is available before accessing it
       if (this.profile && this.profile.contacts) {
         return [
-          { icon: "mdi-linkedin", link: this.profile.contacts.linkedin },
-          { icon: "mdi-github", link: this.profile.contacts.github },
           {
-            icon: "mdi-email",
+            icon: "fa-brands fa-linkedin",
+            link: this.profile.contacts.linkedin,
+          },
+          { icon: "fa-brands fa-github", link: this.profile.contacts.github },
+          {
+            icon: "fa-solid fa-envelope",
             link: `mailto:${
               this.profile.contacts.email
             }?subject=${encodeURIComponent(
               this.defaultSubject,
             )}&body=${encodeURIComponent(this.defaultBody)}`,
           },
-          { icon: "fa-medium", link: this.profile.contacts.medium },
+          { icon: "fa-brands fa-medium", link: this.profile.contacts.medium },
         ];
       }
       // Return an empty array if profile data is not available yet
