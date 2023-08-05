@@ -1,24 +1,18 @@
 <script setup>
-import Layout from "@/layouts/default/Layout";
-
+import BaseLayout from "@/layouts/default/BaseLayout";
 </script>
 
 <template>
-  <layout>
+  <BaseLayout>
     <v-container fluid>
       <v-row justify="center">
         <v-form v-model="valid">
           <v-card>
-            <v-toolbar
-              flat
-              color="blue-grey"
-              dark
-            >
+            <v-toolbar flat color="blue-grey" dark>
               <v-toolbar-title>Send a Message</v-toolbar-title>
             </v-toolbar>
 
             <v-card-text>
-
               <v-item-group multiple selected-class="bg-blue">
                 <div class="text-caption mb-2">Tags</div>
                 <v-item
@@ -26,10 +20,7 @@ import Layout from "@/layouts/default/Layout";
                   :key="index"
                   v-slot="{ selectedClass, toggle }"
                 >
-                  <v-chip
-                    :class="selectedClass"
-                    @click="toggle"
-                  >
+                  <v-chip :class="selectedClass" @click="toggle">
                     {{ tag }}
                   </v-chip>
                 </v-item>
@@ -45,32 +36,26 @@ import Layout from "@/layouts/default/Layout";
               >
               </v-text-field>
 
-              <v-text-field
-                variant="filled"
-                label="Subject"
-              ></v-text-field>
+              <v-text-field variant="filled" label="Subject"></v-text-field>
 
               <v-textarea
                 variant="filled"
                 label="Project Description"
                 required
               ></v-textarea>
-
             </v-card-text>
 
             <v-divider></v-divider>
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn>
-                Send
-              </v-btn>
+              <v-btn> Send </v-btn>
             </v-card-actions>
           </v-card>
         </v-form>
       </v-row>
     </v-container>
-  </layout>
+  </BaseLayout>
 </template>
 
 <script>
@@ -86,23 +71,23 @@ export default {
         "LangChain",
         "OpenAI",
         "MLOps",
-        "Concept"
+        "Concept",
       ],
       email: "",
       emailRules: [
-        value => {
-          if (value) return true
+        (value) => {
+          if (value) return true;
 
-          return 'E-mail is requred.'
+          return "E-mail is requred.";
         },
-        value => {
-          if (/.+@.+\..+/.test(value)) return true
+        (value) => {
+          if (/.+@.+\..+/.test(value)) return true;
 
-          return 'E-mail must be valid.'
+          return "E-mail must be valid.";
         },
       ],
-      valid: false
-    }
-  }
-}
+      valid: false,
+    };
+  },
+};
 </script>

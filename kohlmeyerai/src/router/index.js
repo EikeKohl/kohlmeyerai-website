@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 // Import the components for the pages
-import Home from "@/views/Home.vue";
-import Projects from "@/views/Projects.vue";
-import CV from "@/views/CV.vue";
-import Contact from "@/views/Contact.vue";
+import Home from "@/views/HomePage.vue";
+import Projects from "@/views/ProjectsPage.vue";
+import CV from "@/views/CVPage.vue";
+import Contact from "@/views/ContactPage.vue";
 
 const routes = [
   {
@@ -31,6 +31,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-})
+});
 
-export default router
+export default router;

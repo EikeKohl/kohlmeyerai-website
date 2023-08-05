@@ -6,7 +6,11 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tabs v-model="activeTab" color="white" grow>
-        <v-tab v-for="(item, index) in navigationLinks" :key="index" :to="item.to">
+        <v-tab
+          v-for="(item, index) in navigationLinks"
+          :key="index"
+          :to="item.to"
+        >
           {{ item.label }}
         </v-tab>
       </v-tabs>
@@ -37,23 +41,26 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import { mapState } from "vuex";
 
 export default {
-  name: "Layout",
   computed: {
     ...mapState(["profile", "defaultSubject", "defaultBody"]),
     socialMediaLinks() {
       // Wait until profile data is available before accessing it
       if (this.profile && this.profile.contacts) {
         return [
-          {icon: "mdi-linkedin", link: this.profile.contacts.linkedin},
-          {icon: "mdi-github", link: this.profile.contacts.github},
+          { icon: "mdi-linkedin", link: this.profile.contacts.linkedin },
+          { icon: "mdi-github", link: this.profile.contacts.github },
           {
             icon: "mdi-email",
-            link: `mailto:${this.profile.contacts.email}?subject=${encodeURIComponent(this.defaultSubject)}&body=${encodeURIComponent(this.defaultBody)}`
+            link: `mailto:${
+              this.profile.contacts.email
+            }?subject=${encodeURIComponent(
+              this.defaultSubject,
+            )}&body=${encodeURIComponent(this.defaultBody)}`,
           },
-          {icon: "fa-medium", link: this.profile.contacts.medium},
+          { icon: "fa-medium", link: this.profile.contacts.medium },
         ];
       }
       // Return an empty array if profile data is not available yet
@@ -64,9 +71,9 @@ export default {
     return {
       activeTab: 0, // Index of the currently active tab
       navigationLinks: [
-        {label: "About", to: "/"},
-        {label: "Projects", to: "/projects"},
-        {label: "CV", to: "/cv"},
+        { label: "About", to: "/" },
+        { label: "Projects", to: "/projects" },
+        { label: "CV", to: "/cv" },
       ],
     };
   },
@@ -75,7 +82,6 @@ export default {
       window.open(link, "_blank");
     },
   },
-
 };
 </script>
 

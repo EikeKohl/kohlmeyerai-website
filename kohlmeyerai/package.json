@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "lint": "eslint \"src/**/*.{js,vue}\" --fix"
   },
   "dependencies": {
     "core-js": "^3.29.0",
@@ -25,6 +25,9 @@
     "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.37.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.3.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.60.0",

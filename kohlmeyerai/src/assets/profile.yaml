@@ -210,3 +210,26 @@ projects:
       - GitLab
     duration: 1.5 years
     image: src/assets/BusinessCasual.jpg
+
+recommendations:
+  - name: Sebastian Schramm
+    title: Senior Machine Learning Engineer
+    relation: Team Colleague
+    text: >-
+      I had the privilege of working alongside Eike on several challenging machine learning projects, 
+      and I wholeheartedly recommend him for his exceptional skills and dedication. 
+      Throughout our collaboration, he consistently impressed me with his ability to effectively 
+      solve real-world problems. Eike demonstrated remarkable problem-solving abilities, tackling 
+      intricate issues with perseverance and ingenuity. His meticulous attention to detail and commitment 
+      to producing high-quality results were truly commendable. Moreover, his exceptional teamwork and 
+      effective communication skills greatly contributed to the success of our projects. 
+      It was a pleasure working with Eike.
+  - name: Rail Chamidullin
+    title: Machine Learning Engineer
+    relation: Team Colleague
+    text: >-
+      I worked with Eike on Machine Learning projects at SCAILEX (legal tech). 
+      He helped me a lot to get started and to understand internal processes for NLP-based automation. 
+      Eike is a very dedicated and productive person. He took extra steps to gain new skills and develop 
+      more efficient solutions for the team. It was a pleasure collaborating with Eike, and 
+      I highly recommend his expertise.

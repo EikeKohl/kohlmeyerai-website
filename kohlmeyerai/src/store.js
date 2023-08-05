@@ -6,7 +6,6 @@ export default createStore({
   state: {
     profile: profileData,
     defaultSubject: "Kohlmeyer AI Job Inquiry",
-    defaultBody: "Please describe your project."
+    defaultBody: "Please describe your project.",
   },
 });
-
