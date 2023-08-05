@@ -5,6 +5,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
 <template>
   <BaseLayout>
     <v-container fluid>
+      <!--Project Type Filters-->
       <v-row>
         <v-col cols="12">
           <h3 class="headline mb-4">Filter Project Type</h3>
@@ -23,7 +24,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
           </v-chip-group>
         </v-col>
       </v-row>
-
+      <!--Tech Stack Filters-->
       <v-row>
         <v-col cols="12">
           <h3 class="headline mb-4">Filter Tech Stack</h3>
@@ -39,7 +40,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
           </v-chip-group>
         </v-col>
       </v-row>
-
+      <!--Project Tiles-->
       <v-row>
         <v-col
           cols="6"
