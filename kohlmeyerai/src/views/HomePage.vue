@@ -27,6 +27,9 @@ import BaseLayout from "@/layouts/default/BaseLayout";
                 </v-btn>
               </v-card-actions>
             </v-col>
+            <v-col cols="2" align-self="center">
+              <v-img src="@/assets/qr.svg" height="120" width="120"></v-img>
+            </v-col>
           </v-row>
         </v-card>
       </v-row>
