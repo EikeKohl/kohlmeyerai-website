@@ -6,7 +6,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
   <BaseLayout>
     <v-container>
       <v-row justify="center">
-        <v-col cols="1">
+        <v-col cols="auto">
           <v-btn
             variant="tonal"
             size="x-large"
@@ -16,7 +16,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
             color="#185ABD"
           />
         </v-col>
-        <v-col cols="1">
+        <v-col cols="auto">
           <v-btn
             variant="tonal"
             size="x-large"
@@ -87,7 +87,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
             </v-timeline-item>
           </v-timeline>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="4" sm="12">
           <!-- Skills section -->
           <h2 class="headline mb-4">Technologies</h2>
           <v-chip-group>
