@@ -6,10 +6,10 @@
           <span class="headline">{{ project.title }}</span>
         </v-card-title>
 
-        <v-card-subtitle class="mb-3">{{ project.abstract }}</v-card-subtitle>
+        <v-card-text class="mb-3">{{ project.abstract }}</v-card-text>
 
         <v-card-item>
-          <v-label>Category</v-label>
+          <v-card-title style="font-size: medium">Category</v-card-title>
           <v-chip-group class="mb-2">
             <v-chip
               v-for="(category, index) in project.categories"
@@ -22,7 +22,7 @@
         </v-card-item>
 
         <v-card-item>
-          <v-label>Tech-Stack</v-label>
+          <v-card-title style="font-size: medium">Tech-Stack</v-card-title>
           <v-chip-group class="mb-3">
             <v-chip
               v-for="(tech, index) in project.techStack"
@@ -34,8 +34,8 @@
           </v-chip-group>
         </v-card-item>
 
-        <v-card-subtitle class="mb-2"
-          >Project Duration: {{ project.duration }}</v-card-subtitle
+        <v-card-text class="mb-2"
+          >Project Duration: {{ project.duration }}</v-card-text
         >
       </v-col>
 
@@ -46,16 +46,26 @@
 
     <v-card-actions>
       <v-btn @click="this.expanded = !this.expanded">Details</v-btn>
-      <v-btn :href="project.githubLink" target="_blank" icon>
+      <v-btn
+        v-if="project.githubLink"
+        :href="project.githubLink"
+        target="_blank"
+        icon
+      >
         <v-icon left>mdi-github</v-icon>
       </v-btn>
-      <v-btn :href="project.mediumLink" target="_blank" icon>
+      <v-btn
+        v-if="project.mediumLink"
+        :href="project.mediumLink"
+        target="_blank"
+        icon
+      >
         <v-icon left>mdi-medium</v-icon>
       </v-btn>
     </v-card-actions>
 
     <v-expand-transition>
-      <v-card-text v-if="expanded">
+      <v-card-text v-if="expanded" style="background-color: #f5f5f5">
         {{ project.description }}
       </v-card-text>
     </v-expand-transition>

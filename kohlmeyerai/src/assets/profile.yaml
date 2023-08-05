@@ -16,23 +16,23 @@ contacts:
   medium: https://medium.com/@EKohlmeyer
 
 technologies:
-  - python
-  - sql
+  - Python
+  - SQL
   - scikit-learn
-  - numpy
-  - pandas
-  - tensorflow
-  - pytorch
-  - git
-  - docker
-  - linux
-  - aws
-  - azure
+  - NumPy
+  - Pandas
+  - TensorFlow
+  - PyTorch
+  - Git
+  - Docker
+  - Linux
+  - AWS
+  - Azure
   - dbt
-  - deepspeed
-  - openai
-  - haystack
-  - langchain
+  - DeepSpeed
+  - OpenAI
+  - Haystack
+  - Langchain
 
 experience:
   - title: Freelancer
@@ -107,7 +107,9 @@ certificates:
 
 projects:
   - title: Information Retrieval
-    abstract: Short description of Project 1
+    abstract: >-
+      Enhancement of LLM text generation using contextual information to enable personalized,
+      fact-based chatbot interactions.
     description: >
       I have developed multiple Information Retrieval pipelines that utilize a vectorized knowledge database 
       to enhance LLM prompts, such as those used in ChatGPT, with contextual information, resulting in 
@@ -134,8 +136,8 @@ projects:
     duration: 3 months
     githubLink: https://github.com/EikeKohl/paperqa-web-app
     mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
-    image: src/assets/BusinessCasual.jpg
-  - title: AI Lawyer
+    image: src/assets/information-retrieval.png
+  - title: AI Lawyer Chatbot
     abstract: Short description of Project 2
     description: >
       Research and prototyping for an instruction-based, German LLM using RLHF, capable of:
@@ -158,7 +160,7 @@ projects:
       - Sagemaker
       - Azure
     duration: 3 months
-    image: src/assets/BusinessCasual.jpg
+    image: src/assets/ai-lawyer.png
   - title: Document Classification
     abstract: Short description of Project 2
     description: >
@@ -182,7 +184,7 @@ projects:
       - Sagemaker
       - GitLab
     duration: 1.5 years
-    image: src/assets/BusinessCasual.jpg
+    image: src/assets/document-classification.png
   - title: Information Extraction
     abstract: Short description of Project 2
     description: >
@@ -209,7 +211,7 @@ projects:
       - Sagemaker
       - GitLab
     duration: 1.5 years
-    image: src/assets/BusinessCasual.jpg
+    image: src/assets/information-extraction.png
 
 recommendations:
   - name: Sebastian Schramm

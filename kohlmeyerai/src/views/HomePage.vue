@@ -13,7 +13,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
                 cover
                 height="300"
                 width="300"
-                src="@/assets/BusinessCasual.jpg"
+                src="@/assets/business-casual.jpg"
               />
             </v-col>
 
@@ -48,6 +48,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
             interval="5000"
             height="250"
             style="padding: 20px"
+            hide-delimiters
           >
             <v-carousel-item
               v-for="(recommendation, index) in profile.recommendations"

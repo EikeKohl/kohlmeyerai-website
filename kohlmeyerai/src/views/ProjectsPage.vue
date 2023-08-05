@@ -71,6 +71,12 @@ export default {
         this.selectedCategories.length === 0 &&
         this.selectedTechStack.length === 0
       ) {
+        const set = [
+          ...new Set(
+            this.profile.projects.flatMap((project) => project.techStack),
+          ),
+        ];
+        console.log(set);
         return this.profile.projects;
       }
 
@@ -84,16 +90,23 @@ export default {
         return categoryMatch | techStackMatch;
       });
     },
+    projectCategories() {
+      return [
+        ...new Set(
+          this.profile.projects.flatMap((project) => project.categories),
+        ),
+      ];
+    },
+    technologyTags() {
+      return [
+        ...new Set(
+          this.profile.projects.flatMap((project) => project.techStack),
+        ),
+      ];
+    },
   },
   data() {
     return {
-      projectCategories: [
-        "Web Development",
-        "Machine Learning",
-        "Mobile App",
-        "Data Science",
-      ],
-      technologyTags: ["Vue.js", "React", "Node.js", "Python", "Java"],
       selectedCategories: [],
       selectedTechStack: [],
     };
