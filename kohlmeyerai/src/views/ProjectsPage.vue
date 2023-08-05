@@ -72,23 +72,21 @@ export default {
         this.selectedCategories.length === 0 &&
         this.selectedTechStack.length === 0
       ) {
-        const set = [
-          ...new Set(
-            this.profile.projects.flatMap((project) => project.techStack),
-          ),
-        ];
-        console.log(set);
         return this.profile.projects;
       }
 
+      const checkCategories = (projectCategories, targetCategories) =>
+        targetCategories.every((category) =>
+          projectCategories.includes(category),
+        );
+      const checkTechStack = (projectTechStack, targetTechStack) =>
+        targetTechStack.every((tech) => projectTechStack.includes(tech));
+
       return this.profile.projects.filter((project) => {
-        const categoryMatch = project.categories.some((category) =>
-          this.selectedCategories.includes(category),
+        return (
+          checkCategories(project.categories, this.selectedCategories) &&
+          checkTechStack(project.techStack, this.selectedTechStack)
         );
-        const techStackMatch = project.techStack.some((tech) =>
-          this.selectedTechStack.includes(tech),
-        );
-        return categoryMatch | techStackMatch;
       });
     },
     projectCategories() {
@@ -114,3 +112,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-chip:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.v-chip:not(:hover) {
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+</style>
