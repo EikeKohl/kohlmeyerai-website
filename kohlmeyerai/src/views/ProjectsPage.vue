@@ -43,9 +43,9 @@ import BaseLayout from "@/layouts/default/BaseLayout";
       <!--Project Tiles-->
       <v-row>
         <v-col
-          cols="6"
-          md="6"
-          lg="6"
+          xs="12"
+          md="4"
+          lg="4"
           v-for="(project, index) in selectedProjects"
           :key="index"
           fluid

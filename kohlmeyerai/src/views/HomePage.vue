@@ -18,7 +18,7 @@ import { openLink } from "@/utils";
               />
             </v-col>
 
-            <v-col cols="6">
+            <v-col xs="12" md="6" lg="6">
               <v-card-title>{{ profile.name }}</v-card-title>
               <v-card-subtitle>{{ profile.jobTitle }}</v-card-subtitle>
               <v-card-text> {{ profile.about }}</v-card-text>
@@ -28,7 +28,7 @@ import { openLink } from "@/utils";
                 </v-btn>
               </v-card-actions>
             </v-col>
-            <v-col cols="2" align-self="center">
+            <v-col xs="12" md="2" lg="2" align-self="center">
               <v-img src="@/assets/qr.svg" height="120" width="120"></v-img>
             </v-col>
           </v-row>

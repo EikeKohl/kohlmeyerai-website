@@ -33,19 +33,22 @@ technologies:
   - OpenAI
   - Haystack
   - Langchain
+  - Terraform
+  - Streamlit
+  - Vue.js
 
 experience:
   - title: Freelancer
     company: self employed
     location: Munich, Germany
-    start: 06.2023
+    start: Aug 2023
     end: present
     description: kohlmeyer-ai.com
   - title: Machine Learning Engineer
     company: SCAILEX GmbH
     location: Munich, Germany
-    start: 12.2021
-    end: 08.2023
+    start: Dec 2021
+    end: Aug 2023
     description: >
       I am responsible for the complete MLOps lifecycle including training.
       In this position, I was able to develop my skillset as a machine
@@ -54,8 +57,8 @@ experience:
   - title: Data Scientist
     company: Atruvia AG
     location: Munich, Germany
-    start: 12.2020
-    end: 11.2021
+    start: Dec 2020
+    end: Nov 2021
     description: >
       As a Data Scientist at an IT Service Provider for banks, I developed
       DL / ML applications in a banking context. Please refer to the
@@ -63,14 +66,14 @@ experience:
   - title: Auditor Banks & Asset Management
     company: KPMG AG
     location: Zurich, Switzerland
-    start: 10.2018
-    end: 12.2018
+    start: Oct 2018
+    end: Dec 2018
     description: ""
   - title: Trainee Audit Asset Management
     company: KPMG Société coopérative
     location: Luxembourg, Luxembourg
-    start: 02.2018
-    end: 08.2018
+    start: Feb 2018
+    end: Aug 2018
     description: ""
 
 education:
@@ -106,6 +109,30 @@ certificates:
     issued_by: Microsoft
 
 projects:
+  - title: AI Lawyer Chatbot
+    abstract: Research and prototyping of German LLM using RLHF in multi-node, multi-GPU environment
+    description: >
+      Research and prototyping for an instruction-based, German LLM using RLHF, capable of:
+      - Understanding legal cases
+      - Identying applicable legal contexts
+      - Autonomously asking questions to obtain information relevant to the claim
+      This project included mult-node, multi-GPU training of LLMs on AWS & Azure. 
+      Throughout this project I had to read, comprehend, and implement multiple 
+      state-of-the-art Machine Learning papers.
+    categories:
+      - LLM
+      - RLHF
+      - Machine Learning
+    techStack:
+      - AWS
+      - Huggingface
+      - PyTorch
+      - DeepSpeed
+      - OpenAI
+      - AWS Sagemaker
+      - Azure
+    duration: 3 months
+    image: ai-lawyer.png
   - title: Information Retrieval
     abstract: >-
       Enhancement of LLM text generation using contextual information to enable personalized,
@@ -133,60 +160,19 @@ projects:
       - LangChain
       - HayStack
       - Terraform
+      - AWS Cloudfront
+      - AWS EC2
+      - AWS ECR
+      - AWS Cognito
     duration: 3 months
     githubLink: https://github.com/EikeKohl/paperqa-web-app
     mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
-    image: src/assets/information-retrieval.png
-  - title: AI Lawyer Chatbot
-    abstract: Short description of Project 2
-    description: >
-      Research and prototyping for an instruction-based, German LLM using RLHF, capable of:
-      - Understanding legal cases
-      - Identying applicable legal contexts
-      - Autonomously asking questions to obtain information relevant to the claim
-      This project included mult-node, multi-GPU training of LLMs on AWS & Azure. 
-      Throughout this project I had to read, comprehend, and implement multiple 
-      state-of-the-art Machine Learning papers.
-    categories:
-      - LLM
-      - RLHF
-      - Machine Learning
-    techStack:
-      - AWS
-      - Huggingface
-      - PyTorch
-      - DeepSpeed
-      - OpenAI
-      - Sagemaker
-      - Azure
-    duration: 3 months
-    image: src/assets/ai-lawyer.png
-  - title: Document Classification
-    abstract: Short description of Project 2
-    description: >
-      As a Machine Learning Engineer, I’ve trained, evaluated, and
-      deployed document classification models for SCAILEX and its SaaS
-      platform handling 500,000+ annual documents from various sources.
-      Using SWEM and transformers-based approaches, we achieved a
-      60% automation rate with 95% accuracy. Model training experiments
-      were conducted on Sagemaker and tracked in MLflow for efficient
-      development.
-    categories:
-      - Machine Learning
-      - CICD
-      - MLOps
-    techStack:
-      - AWS
-      - Huggingface
-      - PyTorch
-      - Lambda
-      - MLflow
-      - Sagemaker
-      - GitLab
-    duration: 1.5 years
-    image: src/assets/document-classification.png
+    image: information-retrieval.png
   - title: Information Extraction
-    abstract: Short description of Project 2
+    abstract:  >-
+      Training and deployment of information extraction models, 
+      including Named Entity Recognition in the legal domain, using transformers 
+      and OCR with MLflow on Sagemaker.
     description: >
       Training, evaluation, deployment, and monitoring of information
       extraction models. In the context of the legal domain, this involves
@@ -203,15 +189,37 @@ projects:
       - CICD
       - MLOps
     techStack:
-      - AWS
       - Huggingface
       - PyTorch
-      - Lambda
+      - AWS Lambda
       - MLflow
-      - Sagemaker
+      - AWS Sagemaker
       - GitLab
     duration: 1.5 years
-    image: src/assets/information-extraction.png
+    image: information-extraction.png
+  - title: Document Classification
+    abstract: Deployment of document classification models, achieving up to 95% accuracy.
+    description: >
+      As a Machine Learning Engineer, I’ve trained, evaluated, and
+      deployed document classification models for SCAILEX and its SaaS
+      platform handling 500,000+ annual documents from various sources.
+      Using SWEM and transformers-based approaches, we achieved a
+      60% automation rate with 95% accuracy. Model training experiments
+      were conducted on Sagemaker and tracked in MLflow for efficient
+      development.
+    categories:
+      - Machine Learning
+      - CICD
+      - MLOps
+    techStack:
+      - Huggingface
+      - PyTorch
+      - AWS Lambda
+      - MLflow
+      - AWS Sagemaker
+      - GitLab
+    duration: 1.5 years
+    image: document-classification.png
 
 recommendations:
   - title: Senior Machine Learning Engineer

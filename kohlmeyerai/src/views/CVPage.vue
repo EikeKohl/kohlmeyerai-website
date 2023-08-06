@@ -10,7 +10,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
           <v-btn
             variant="tonal"
             size="x-large"
-            href="src/assets/ai-lawyer.png"
+            href="CV_Eike_Kohlmeyer.docx"
             target="_blank"
             icon="fa-regular fa-file-word"
             color="#185ABD"
@@ -20,7 +20,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
           <v-btn
             variant="tonal"
             size="x-large"
-            href="src/assets/ai-lawyer.png"
+            href="CV_Eike_Kohlmeyer.pdf"
             target="_blank"
             icon="fa-regular fa-file-pdf"
             color="#B30B00"
@@ -30,7 +30,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
     </v-container>
     <v-container class="py-6">
       <v-row>
-        <v-col cols="12" md="8">
+        <v-col xs="12" md="8" lg="8">
           <v-timeline side="end">
             <!-- Experience section -->
             <v-timeline-item hide-dot="true">
