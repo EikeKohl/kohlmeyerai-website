@@ -40,6 +40,9 @@
   </v-app>
 </template>
 
+<script setup>
+import { openLink } from "@/utils";
+</script>
 <script>
 import { mapState } from "vuex";
 
@@ -79,11 +82,6 @@ export default {
         { label: "CV", to: "/cv" },
       ],
     };
-  },
-  methods: {
-    openLink(link) {
-      window.open(link, "_blank");
-    },
   },
 };
 </script>

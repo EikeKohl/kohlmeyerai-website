@@ -10,7 +10,7 @@ about: >
   to clients and businesses.
 contacts:
   email: ekohlmeyer21@gmail.com
-  linkedin: https://www.linkedin.com/in/eike-steffen-kohlmeyer-4a0765138/
+  linkedin: https://www.linkedin.com/in/eike-kohlmeyer/
   github: https://github.com/EikeKohl
   website: https://kohlmeyer-ai.com
   medium: https://medium.com/@EKohlmeyer
@@ -214,9 +214,8 @@ projects:
     image: src/assets/information-extraction.png
 
 recommendations:
-  - name: Sebastian Schramm
-    title: Senior Machine Learning Engineer
-    relation: Team Colleague
+  - title: Senior Machine Learning Engineer
+    relation: Former Team Colleague
     text: >-
       I had the privilege of working alongside Eike on several challenging machine learning projects, 
       and I wholeheartedly recommend him for his exceptional skills and dedication. 
@@ -226,9 +225,8 @@ recommendations:
       to producing high-quality results were truly commendable. Moreover, his exceptional teamwork and 
       effective communication skills greatly contributed to the success of our projects. 
       It was a pleasure working with Eike.
-  - name: Rail Chamidullin
-    title: Machine Learning Engineer
-    relation: Team Colleague
+  - title: Machine Learning Engineer
+    relation: Former Team Colleague
     text: >-
       I worked with Eike on Machine Learning projects at SCAILEX (legal tech). 
       He helped me a lot to get started and to understand internal processes for NLP-based automation. 

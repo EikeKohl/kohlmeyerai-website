@@ -1,5 +1,6 @@
 <script setup>
 import BaseLayout from "@/layouts/default/BaseLayout";
+import { openLink } from "@/utils";
 </script>
 
 <template>
@@ -57,6 +58,9 @@ import BaseLayout from "@/layouts/default/BaseLayout";
               v-for="(recommendation, index) in profile.recommendations"
               :key="index"
               class="d-flex justify-center align-center"
+              @click="
+                openLink(`${profile.contacts.linkedin}/details/recommendations`)
+              "
             >
               <v-card
                 rounded
@@ -64,7 +68,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
                 elevation="5"
                 style="background-color: #e3ecf7"
               >
-                <v-card-title>{{ recommendation.name }}</v-card-title>
+                <v-card-title>{{ recommendation.relation }}</v-card-title>
                 <v-card-subtitle>{{ recommendation.title }}</v-card-subtitle>
                 <v-card-text> {{ recommendation.text }}</v-card-text>
               </v-card>
@@ -96,3 +100,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-carousel-item:hover {
+  cursor: pointer;
+}
+</style>
