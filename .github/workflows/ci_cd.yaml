@@ -5,10 +5,6 @@ on:
     paths:
       - 'kohlmeyerai/**'
 
-env:
-  CLOUDFRONT_DIST_ID: E1OMWNKSLM5EU7
-  DEPLOYMENT_BUCKET: s3://kohlmeyer-ai.com
-
 jobs:
   lint:
     runs-on: ubuntu-latest
