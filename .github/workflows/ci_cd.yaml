@@ -48,7 +48,7 @@ jobs:
 
       - name: Upload static web page
         run: |
-          aws s3 sync dist $DEPLOYMENT_BUCKET --delete --recursive
+          aws s3 sync ./dist $DEPLOYMENT_BUCKET
 
       - name: Create CloudFront invalidation
         run: |
