@@ -11,6 +11,8 @@ jobs:
   lint_and_build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Lint and Build
         uses: docker://node:20.3.1-slim
         with:
@@ -23,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: "./"
+          path: kohlmeyerai/dist
 
   deploy:
     runs-on: ubuntu-latest
