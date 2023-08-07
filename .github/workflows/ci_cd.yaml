@@ -4,14 +4,12 @@ on:
   push:
     paths:
       - 'kohlmeyerai/**'
+      - '.github/workflows/**'
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Install dependencies and run lint
         uses: docker://node:20.3.1-slim
         with:
@@ -23,9 +21,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Install dependencies and run build
         uses: docker://node:20.3.1-slim
         with:
@@ -38,9 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, build]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Upload static web page
         uses: docker://amazon/aws-cli
         with:
@@ -49,4 +41,4 @@ jobs:
       - name: Create CloudFront invalidation
         uses: docker://amazon/aws-cli
         with:
-          args: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/*"
+          args: cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/*"
