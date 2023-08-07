@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: *
+          path: "./"
 
   deploy:
     runs-on: ubuntu-latest
