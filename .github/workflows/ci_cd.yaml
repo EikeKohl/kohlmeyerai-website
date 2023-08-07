@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies and run lint
-        uses: node:20.3.1-slim
+        uses: docker://node:20.3.1-slim
         with:
           working-directory: kohlmeyerai
           run: |
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies and run build
-        uses: node:20.3.1-slim
+        uses: docker://node:20.3.1-slim
         with:
           working-directory: kohlmeyerai
           run: |
@@ -33,7 +33,7 @@ jobs:
     needs: [lint, build]
     steps:
       - name: Upload static web page
-        uses: amazon/aws-cli
+        uses: docker://amazon/aws-cli
         with:
           args: s3 sync kohlmeyerai/dist $DEPLOYMENT_BUCKET
 
