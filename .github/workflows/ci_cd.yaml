@@ -28,9 +28,11 @@ jobs:
           run: |
             npm install
             npm run build
+            ls
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3
         with:
+          working-directory: kohlmeyerai
           name: website
           path: dist
 
