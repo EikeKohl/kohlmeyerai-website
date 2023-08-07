@@ -48,10 +48,8 @@ jobs:
 
       - name: Upload static web page
         run: |
-          echo $DEPLOYMENT_BUCKET
-          echo "$CLOUDFRONT_DIST_ID"
-          aws s3 sync dist $DEPLOYMENT_BUCKET
+          aws s3 sync dist s3://kohlmeyer-ai.com
 
       - name: Create CloudFront invalidation
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DIST_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id E1OMWNKSLM5EU7 --paths "/*"
