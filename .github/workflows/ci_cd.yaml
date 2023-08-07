@@ -33,11 +33,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: website
+          path: dist
 
       - name: Upload static web page
         uses: docker://amazon/aws-cli
         with:
-          args: s3 sync kohlmeyerai/dist $DEPLOYMENT_BUCKET
+          args: s3 sync dist $DEPLOYMENT_BUCKET
 
       - name: Create CloudFront invalidation
         uses: docker://amazon/aws-cli
