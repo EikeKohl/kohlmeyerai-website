@@ -38,6 +38,6 @@ jobs:
           args: s3 sync kohlmeyerai/dist $DEPLOYMENT_BUCKET
 
       - name: Create CloudFront invalidation
-        uses: amazon/aws-cli
+        uses: docker://amazon/aws-cli
         with:
           args: cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/*"
