@@ -48,8 +48,9 @@ jobs:
 
       - name: Upload static web page
         run: |
-          ls
-          aws s3 sync dist ${{ env.DEPLOYMENT_BUCKET }}
+          echo ${{env.DEPLOYMENT_BUCKET}}
+          echo ${{env.CLOUDFRONT_DIST_ID}}
+          aws s3 sync dist ${{env.DEPLOYMENT_BUCKET}}
 
       - name: Create CloudFront invalidation
         run: |
