@@ -47,7 +47,9 @@ jobs:
           aws-region: eu-central-1
 
       - name: Upload static web page
-        run: aws s3 sync dist $DEPLOYMENT_BUCKET
+        run: |
+          aws s3 sync dist $DEPLOYMENT_BUCKET --delete --recursive
 
       - name: Create CloudFront invalidation
-        run: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/*"
+        run: |
+          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths "/*"
