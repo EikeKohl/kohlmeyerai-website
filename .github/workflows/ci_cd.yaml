@@ -31,7 +31,7 @@ jobs:
 
       - name: Verify build artifacts
         run: |
-          ls dist
+          ls
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3
