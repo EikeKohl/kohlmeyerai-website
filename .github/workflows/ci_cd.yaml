@@ -7,37 +7,23 @@ on:
       - '.github/workflows/**'
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install dependencies and run lint
-        uses: docker://node:20.3.1-slim
-        with:
-          working-directory: kohlmeyerai
-          run: |
-            npm install
-            npm run lint
 
-  build:
+  lint_and_build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies and run build
+      - name: Lint and Build
         uses: docker://node:20.3.1-slim
         with:
-          working-directory: kohlmeyerai
           run: |
+            cd kohlmeyerai
             npm install
+            npm run lint 
             npm run build
-
-      - name: Verify build artifacts
-        run: |
-          ls
-
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: dist
+          path: kohlmeyerai/dist
 
   deploy:
     runs-on: ubuntu-latest
