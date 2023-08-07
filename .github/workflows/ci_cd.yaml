@@ -48,6 +48,7 @@ jobs:
 
       - name: Upload static web page
         run: |
+          ls
           aws s3 sync ./dist $DEPLOYMENT_BUCKET
 
       - name: Create CloudFront invalidation
