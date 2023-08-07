@@ -28,7 +28,11 @@ jobs:
           run: |
             npm install
             npm run build
-            ls
+
+      - name: Verify build artifacts
+        run: |
+          ls kohlmeyerai/dist
+
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3
         with:
