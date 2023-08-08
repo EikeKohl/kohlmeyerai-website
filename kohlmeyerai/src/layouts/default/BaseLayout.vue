@@ -1,11 +1,15 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <v-toolbar-title class="mr-12 text-h6 font-weight-bold">
+    <!-- Header -->
+    <v-app-bar app color="#0A283E">
+      <v-toolbar-title
+        class="mr-12 text-h6 font-weight-bold"
+        style="color: #ffffff"
+      >
         <span class="clickable" @click="$router.push('/')">Kohlmeyer AI</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-tabs v-model="activeTab" color="white" grow>
+      <v-tabs v-model="activeTab" style="color: #ffffff" grow>
         <v-tab
           v-for="(item, index) in navigationLinks"
           :key="index"
@@ -24,13 +28,14 @@
     </v-main>
 
     <!-- Footer -->
-    <v-footer color="primary" app dark class="py-4">
+    <v-footer color="#0A283E" app class="py-4">
       <v-row justify="center" class="py-3">
         <v-icon
           v-for="(item, index) in socialMediaLinks"
           :key="index"
           class="mx-4 clickable"
           size="x-large"
+          color="#FFFFFF"
           @click="openLink(item.link)"
         >
           {{ item.icon }}
