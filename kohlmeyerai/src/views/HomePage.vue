@@ -12,9 +12,10 @@ import { openLink } from "@/utils";
             <v-col xs="12" md="4" lg="4">
               <v-img
                 cover
-                height="300"
-                width="300"
+                height="320"
+                width="320"
                 src="@/assets/business-casual.jpg"
+                class="mx-auto"
               />
             </v-col>
 
@@ -29,7 +30,12 @@ import { openLink } from "@/utils";
               </v-card-actions>
             </v-col>
             <v-col xs="12" md="2" lg="2" align-self="center">
-              <v-img src="@/assets/qr.svg" height="120" width="120"></v-img>
+              <v-img
+                src="@/assets/qr.svg"
+                height="120"
+                width="120"
+                class="mx-auto"
+              ></v-img>
             </v-col>
           </v-row>
         </v-card>
@@ -38,20 +44,19 @@ import { openLink } from "@/utils";
 
     <v-container class="my-8" fluid>
       <v-row justify="center">
-        <v-card rounded max-width="1000" elevation="7" class="text-center">
+        <v-card rounded max-width="1000" elevation="7">
           <v-carousel
             cycle
             hide-delimiter-background
             show-arrows="hover"
             interval="5000"
-            height="300"
+            class="fill-height"
             style="padding: 20px"
             hide-delimiters
           >
             <v-carousel-item
               v-for="(recommendation, index) in profile.recommendations"
               :key="index"
-              class="d-flex justify-center align-center"
               @click="
                 openLink(`${profile.contacts.linkedin}/details/recommendations`)
               "

@@ -30,7 +30,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
     </v-container>
     <v-container class="py-6">
       <v-row>
-        <v-col xs="12" md="8" lg="8">
+        <v-col xs="12" md="8" lg="8" sm="12">
           <v-timeline side="end">
             <!-- Experience section -->
             <v-timeline-item hide-dot="true">
@@ -87,7 +87,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
             </v-timeline-item>
           </v-timeline>
         </v-col>
-        <v-col cols="12" md="4" sm="12">
+        <v-col xs="12" md="4" lg="4" sm="12">
           <!-- Skills section -->
           <h2 class="headline mb-4">Technologies</h2>
           <v-chip-group>
@@ -139,7 +139,7 @@ export default {
 
 <style>
 .timeline-card {
-  max-width: 800px; /* Adjust the max-width as per your preference */
+  max-width: 600px; /* Adjust the max-width as per your preference */
   margin: 0 auto;
   padding: 10px;
   border-radius: 8px;
