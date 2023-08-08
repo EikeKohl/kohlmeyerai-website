@@ -5,11 +5,11 @@ import { openLink } from "@/utils";
 
 <template>
   <BaseLayout>
-    <v-container class="my-8">
+    <v-container class="my-8" fluid>
       <v-row justify="center">
         <v-card rounded max-width="1000" elevation="7">
           <v-row>
-            <v-col cols="4">
+            <v-col xs="12" md="4" lg="4">
               <v-img
                 cover
                 height="300"
@@ -36,21 +36,15 @@ import { openLink } from "@/utils";
       </v-row>
     </v-container>
 
-    <v-container class="my-8">
+    <v-container class="my-8" fluid>
       <v-row justify="center">
-        <v-card
-          rounded
-          max-width="1000"
-          elevation="7"
-          title="Recommendations"
-          class="text-center"
-        >
+        <v-card rounded max-width="1000" elevation="7" class="text-center">
           <v-carousel
             cycle
             hide-delimiter-background
             show-arrows="hover"
             interval="5000"
-            height="250"
+            height="300"
             style="padding: 20px"
             hide-delimiters
           >
@@ -66,7 +60,7 @@ import { openLink } from "@/utils";
                 rounded
                 max-width="1000"
                 elevation="5"
-                style="background-color: #e3ecf7"
+                style="background-color: #f0ede5"
               >
                 <v-card-title>{{ recommendation.relation }}</v-card-title>
                 <v-card-subtitle>{{ recommendation.title }}</v-card-subtitle>
