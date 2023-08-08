@@ -90,8 +90,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .v-expand-transition {
   transition: height 0.3s ease-out;
+}
+.v-chip-group {
+  pointer-events: none;
 }
 </style>

@@ -137,7 +137,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .timeline-card {
   max-width: 600px; /* Adjust the max-width as per your preference */
   margin: 0 auto;
@@ -145,5 +145,8 @@ export default {
   border-radius: 8px;
   /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
   background-color: #fff;
+}
+.v-chip-group {
+  pointer-events: none;
 }
 </style>
