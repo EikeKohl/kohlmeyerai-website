@@ -111,14 +111,22 @@ certificates:
 projects:
   - title: AI Lawyer Chatbot
     abstract: Research and prototyping of German LLM using RLHF in multi-node, multi-GPU environment
-    description: >
-      Research and prototyping for an instruction-based, German LLM using RLHF, capable of:
-      - Understanding legal cases
-      - Identying applicable legal contexts
-      - Autonomously asking questions to obtain information relevant to the claim
-      This project included mult-node, multi-GPU training of LLMs on AWS & Azure. 
-      Throughout this project I had to read, comprehend, and implement multiple 
-      state-of-the-art Machine Learning papers.
+    description:
+      industry: Legal Tech
+      objective: >
+        The core objective of this project was to conduct research and prototype an instruction-based, 
+        German Legal Language Model (LLM) utilizing Reinforcement Learning from Human Feedback (RLHF). 
+        This LLM was designed to possess advanced capabilities including comprehending legal cases, 
+        discerning relevant legal contexts, and independently generating pertinent inquiries to gather 
+        information crucial to a legal claim.
+      approach: >
+        The first challenge was to generate a good quality annotated instruction dataset to perform the
+        RLHF training. Once the dataset was generated the next hurdle was to perform mult-node, 
+        multi-GPU training of LLMs on AWS & Azure. Since RLHF was a brand new technique, I used and contributed
+        to open-source libraries, such as chatllama by nebuly.ai (see https://github.com/nebuly-ai/nebuly/pull/316
+        and https://github.com/nebuly-ai/nebuly/pull/326).
+        Throughout this project I had to read, comprehend, and implement multiple
+        state-of-the-art Machine Learning papers.
     categories:
       - LLM
       - RLHF
@@ -133,25 +141,84 @@ projects:
       - Azure
     duration: 3 months
     image: ai-lawyer.png
-  - title: Information Retrieval
+  - title: Paper Q&A Web Application
     abstract: >-
-      Enhancement of LLM text generation using contextual information to enable personalized,
-      fact-based chatbot interactions.
-    description: >
-      I have developed multiple Information Retrieval pipelines that utilize a vectorized knowledge database 
-      to enhance LLM prompts, such as those used in ChatGPT, with contextual information, resulting in 
-      personalized and fact-based chatbot interactions. These pipelines have been successfully applied to 
-      various use cases, including automated communication with clients and courts, leveraging case-specific 
-      information for a legaltech company. Additionally, I have created a Document query engine, as showcased 
-      in a GitHub repository and a Medium blog post, which enables users to perform queries on their own 
-      unstructured text databases. Both services have been deployed on AWS, utilizing terraform Infrastructure 
-      as Code to ensure authentication, load balancing, and other essential features are implemented effectively.
+      Enhancement of LLM text generation using contextual information to enable
+      fact-based question answering to quickly and efficiently understand research papers
+      and be able to look up information
+    description:
+      industry: Personal Use
+      objective: >
+        The era of Large Language Models (LLM) has come and with the hype and the current power of
+        innovation comes a huge flood of new developments both in proprietary context as well as in the
+        open source world. To be able to always be up to date and to deliver state of the art solutions
+        as a Machine Learning Engineer / Data Scientist, it is necessary to quickly understand whether a paper
+        is relevant, understand the content of the paper, and be able to look up certain facts quickly.
+        In the sense of the saying "fight fire with fire", let's use LLMs to understand LLMs (wink emoji).
+      approach: >
+        The crux is to intelligently incorporate the available context information like a specific or even
+        multiple paper(s) into an LLM`s text generation. The context has to be chunked into processable units,
+        relevant context has to be selected, and we have to ensure that the answer is fact-based and not
+        hallucinated by the LLM.
+        To achieve this, I decided to use deepset's GenerativeQAPipeline along with an OpenAIAnswerGenerator.
+        There are other LLM pipelining tool's like LangChain, however, for this project I decided to go for 
+        deepset as I have used it before and save LangChain for my next project. Using FAISS,
+        my sentence level chunked papers will be embedded and stored in a vector database. This allows to retrieve
+        relevant context using cosine similiarity between the embedded query vector and the respective context
+        vectors. There are still adjustments to be implement to ensure factual correctness and further improve
+        the context retrieval, but my streamlit app that also displays the retrieved context matches enables the
+        user to perform sanity checks on the answer or even look up the actual text paragraphs in the original paper.
+      result: The streamlit app including terraform IaC for deployment on AWS can be found in the linked GitHub repo.
+      deployment: AWS ECR + ECS incl. custom domain on AWS Route 53 and AWS Cognito authorization
     categories:
       - Web Application
       - Machine Learning
       - LLM
       - Retrieval Augmented Generation
       - CICD
+    techStack:
+      - HuggingFace
+      - Streamlit
+      - OpenAI
+      - Azure
+      - Deepset
+      - HayStack
+      - Terraform
+      - AWS Cloudfront
+      - AWS EC2
+      - AWS ECR
+      - AWS Cognito
+    duration: 3 days
+    githubLink: https://github.com/EikeKohl/paperqa-web-app
+    mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
+    image: paperqa.png
+  - title: Multi Stage Verdict Analysis Web Application using ChatGPT
+    abstract: >-
+      Web application for the analysis of incoming verdicts to formulate statements of appeal
+      based on the verdicts content.
+    description:
+      industry: Legal Tech
+      objective: >
+        If a lawyer wants to appeal for a verdict, they have to provide reasons in a statement of appeal.
+        To do so, the critical text passages in the verdict have to be identified and the statement has to be written.
+        This can be a time consuming task as the verdicts are often very complex and long texts. The goal of
+        the project was to decrease the manual effort necesary by increasing the level of automation
+      approach: >
+        The idea was to first identify relevant text passages in the input verdict using regex.
+        Then I implemented a prompt chain, i.e. a multi stage ChatGPT prompting approach to first analyse the verdict
+        regarding critical text passages through well designed prompt engineering and, based on the analysis, summarize
+        the findings to formulate fitting statements of appeal.
+      result: >
+        Results are generated once a verdict arrives so that the app loads the pre generated results to enable
+        the user to quickly fact check the analysis summary to approve the statement of appeal.
+      deployment: AWS ECR + ECS incl. custom domain on AWS Route 53 and AWS Cognito authorization
+    categories:
+      - Web Application
+      - Machine Learning
+      - LLM
+      - Retrieval Augmented Generation
+      - CICD
+      - Prompt Engineering
     techStack:
       - HuggingFace
       - Streamlit
@@ -165,25 +232,29 @@ projects:
       - AWS ECR
       - AWS Cognito
     duration: 3 months
-    githubLink: https://github.com/EikeKohl/paperqa-web-app
-    mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
     image: information-retrieval.png
   - title: Information Extraction
     abstract:  >-
       Training and deployment of information extraction models, 
-      including Named Entity Recognition in the legal domain, using transformers 
-      and OCR with MLflow on Sagemaker.
-    description: >
-      Training, evaluation, deployment, and monitoring of information
-      extraction models. In the context of the legal domain, this involves
-      Named Entity Recognition (NER) of pertinent details from client,
-      court, and insurance correspondence. To achieve this, I utilized
-      transformers-based architectures and a BiLSTM-CRF ensemble
-      model approach. Additionally, my team and I developed an Optical
-      Character Recognition model to extract information from images sent
-      by customers, employing a YOLOv5 + TrOCR model ensemble.
-      Experiments for model training were conducted on Sagemaker and
-      tracked in MLflow.
+      including Named Entity Recognition in the legal domain, using transformers with MLflow on Sagemaker.
+    description:
+      industry: Legal Tech
+      objective: >
+        The primary objective of this project was to establish a comprehensive pipeline for training, 
+        evaluating, deploying, and monitoring information extraction models. 
+        Within the context of the legal domain, the focus was on implementing Named Entity Recognition (NER) 
+        techniques to accurately extract crucial details from various forms of correspondence, 
+        including those from clients, courts, and insurance entities.
+      approach: >
+        Leveraging cutting-edge technology, I employed transformers-based architectures and devised a BiLSTM-CRF 
+        ensemble model approach. This amalgamation allowed for enhanced contextual understanding and 
+        robust entity recognition. The ensemble method aimed to leverage the strengths of both 
+        architectures to attain more accurate NER outcomes.
+        To achieve optimal results, extensive experiments were carried out. Model training experiments were 
+        executed on Sagemaker, harnessing its scalability and efficiency. The training process was managed 
+        through MLflow, allowing for systematic tracking of experiments, facilitating transparency, 
+        reproducibility, and informed decision-making.
+      deployment: AWS Lambda + AWS SNS / SQS
     categories:
       - Machine Learning
       - CICD
@@ -198,15 +269,27 @@ projects:
     duration: 1.5 years
     image: information-extraction.png
   - title: Document Classification
-    abstract: Deployment of document classification models, achieving up to 95% accuracy.
-    description: >
-      As a Machine Learning Engineer, I’ve trained, evaluated, and
-      deployed document classification models for SCAILEX and its SaaS
-      platform handling 500,000+ annual documents from various sources.
-      Using SWEM and transformers-based approaches, we achieved a
-      60% automation rate with 95% accuracy. Model training experiments
-      were conducted on Sagemaker and tracked in MLflow for efficient
-      development.
+    abstract: >
+      Training, Evaluation, and Deployment of document classification models for a legal
+      tech company with high accuracy.
+    description:
+      industry: Legal Tech
+      objective: >
+        Input and output management for correspondence with clients, insurers, and courts constitutes 
+        a significant cost factor for legal professionals and law firms in Germany. 
+        The initial stride towards automating incoming correspondence involves the automatic identification 
+        of document types, enabling subsequent <b>document-specific</b> processes to be executed flawlessly and 
+        efficiently. The objective of the project was thus to achieve a highly precise machine 
+        learning-based classification of a substantial volume of incoming documents.
+      approach: >
+        Certain subsets of document types were received through specific channels, thus to enhance the 
+        accuracy of classification outcomes, channel-specific models were trained. In addition to 
+        state-of-the-art transformer architectures, simpler document embedding-based baseline models 
+        were employed. Among these baseline models, one model prevailed over the transformer models 
+        due to factors such as training and inference time, model size, and performance. The training 
+        experiments were conducted using Sagemaker and tracked within MLflow.
+      result: 95% accuracy with an automation rate of 80 % of 500,000+ documents
+      deployment: AWS Lambda + AWS SNS / SQS
     categories:
       - Machine Learning
       - CICD

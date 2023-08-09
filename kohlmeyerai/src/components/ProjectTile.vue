@@ -67,9 +67,22 @@
     </v-card-actions>
     <!--Full Description-->
     <v-expand-transition>
-      <v-card-text v-if="expanded" style="background-color: #f5f5f5">
-        {{ project.description }}
-      </v-card-text>
+      <v-container v-if="expanded" style="background-color: #f5f5f5">
+        <v-row
+          v-for="(value, property) in project.description"
+          :key="`${project.title}_${property}`"
+          dense
+        >
+          <v-col>
+            <v-card-title style="font-size: small">{{
+              property.toUpperCase()
+            }}</v-card-title>
+            <v-card-text>
+              <div v-html="value" />
+            </v-card-text>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-expand-transition>
   </v-card>
 </template>
