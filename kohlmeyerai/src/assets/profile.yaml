@@ -304,7 +304,8 @@ projects:
     image: document-classification.png
 
 recommendations:
-  - title: Senior Machine Learning Engineer
+  - name: LinkedIn Member
+    title: Senior Machine Learning Engineer
     relation: Former Team Colleague
     text: >-
       I had the privilege of working alongside Eike on several challenging machine learning projects, 
@@ -315,7 +316,8 @@ recommendations:
       to producing high-quality results were truly commendable. Moreover, his exceptional teamwork and 
       effective communication skills greatly contributed to the success of our projects. 
       It was a pleasure working with Eike.
-  - title: Machine Learning Engineer
+  - name: Rail Chamidullin
+    title: Machine Learning Engineer
     relation: Former Team Colleague
     text: >-
       I worked with Eike on Machine Learning projects at SCAILEX (legal tech). 

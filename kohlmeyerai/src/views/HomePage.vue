@@ -57,9 +57,7 @@ import { openLink } from "@/utils";
             <v-carousel-item
               v-for="(recommendation, index) in profile.recommendations"
               :key="index"
-              @click="
-                openLink(`${profile.contacts.linkedin}/details/recommendations`)
-              "
+              @click="openLink(profile.contacts.linkedin)"
             >
               <v-card
                 rounded
@@ -67,7 +65,7 @@ import { openLink } from "@/utils";
                 elevation="5"
                 style="background-color: #f0ede5"
               >
-                <v-card-title>{{ recommendation.relation }}</v-card-title>
+                <v-card-title>{{ recommendation.name }}</v-card-title>
                 <v-card-subtitle>{{ recommendation.title }}</v-card-subtitle>
                 <v-card-text> {{ recommendation.text }}</v-card-text>
               </v-card>

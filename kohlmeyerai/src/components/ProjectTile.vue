@@ -1,5 +1,5 @@
 <template>
-  <v-card style="padding: 12px" elevation="7" min-height="800">
+  <v-card style="padding: 12px" elevation="7" min-height="850">
     <!--Header-->
     <v-row>
       <v-col>

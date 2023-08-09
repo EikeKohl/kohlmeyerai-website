@@ -7,7 +7,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
     <v-container fluid>
       <!--Project Type Filters-->
       <v-row>
-        <v-col cols="12">
+        <v-col sm="6" md="6" lg="6" xl="6" xxl="6" xs="12">
           <h3 class="headline mb-4">Filter Project Type</h3>
           <v-chip-group
             v-model="selectedCategories"
@@ -26,7 +26,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
       </v-row>
       <!--Tech Stack Filters-->
       <v-row>
-        <v-col cols="12">
+        <v-col sm="6" md="6" lg="6" xl="6" xxl="6" xs="12">
           <h3 class="headline mb-4">Filter Tech Stack</h3>
           <v-chip-group
             v-model="selectedTechStack"
