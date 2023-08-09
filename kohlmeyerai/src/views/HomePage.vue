@@ -24,7 +24,7 @@ import { openLink } from "@/utils";
               <v-card-subtitle>{{ profile.jobTitle }}</v-card-subtitle>
               <v-card-text> {{ profile.about }}</v-card-text>
               <v-card-actions class="d-flex justify-center">
-                <v-btn variant="tonal" color="primary" @click="sendMail">
+                <v-btn variant="tonal" color="#0A283E" @click="sendMail">
                   Contact
                 </v-btn>
               </v-card-actions>
