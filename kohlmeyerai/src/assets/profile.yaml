@@ -117,19 +117,22 @@ projects:
     description:
       industry: Legal Tech
       objective: >
-        The core objective of this project was to conduct research and prototype an instruction-based, 
-        German Legal Language Model (LLM) utilizing Reinforcement Learning from Human Feedback (RLHF). 
+        The core objective of this project was to conduct research and prototype an <b>instruction-based, 
+        German Legal Language Model (LLM)</b> utilizing Reinforcement Learning from Human Feedback <b>(RLHF)</b>. 
         This LLM was designed to possess advanced capabilities including comprehending legal cases, 
         discerning relevant legal contexts, and independently generating pertinent inquiries to gather 
         information crucial to a legal claim.
       approach: >
         The first challenge was to generate a good quality annotated instruction dataset to perform the
-        RLHF training. Once the dataset was generated the next hurdle was to perform mult-node, 
-        multi-GPU training of LLMs on AWS & Azure. Since RLHF was a brand new technique, I used and contributed
-        to open-source libraries, such as chatllama by nebuly.ai (see https://github.com/nebuly-ai/nebuly/pull/316
-        and https://github.com/nebuly-ai/nebuly/pull/326).
-        Throughout this project I had to read, comprehend, and implement multiple
-        state-of-the-art Machine Learning papers.
+        RLHF training. Once the dataset was generated the next hurdle was to perform <b>multi-node, 
+        multi-GPU training</b> of LLMs on <b>AWS</b> & <b>Azure</b>. 
+        Since RLHF was a brand new technique, I used and contributed
+        to open-source libraries, such as 
+        <b><a href="https://github.com/nebuly-ai/nebuly/tree/main/optimization/chatllama">chatllama</a></b> 
+        by nebuly.ai (see <a href="https://github.com/nebuly-ai/nebuly/pull/316">Pull Request 316</a>
+        and <a href="https://github.com/nebuly-ai/nebuly/pull/326">Pull Request 326</a>).
+        Throughout this project I had to read, comprehend, and <b>implement</b> multiple
+        <b>state-of-the-art Machine Learning papers</b>.
     categories:
       - LLM
       - RLHF
@@ -152,26 +155,26 @@ projects:
     description:
       industry: Personal Use
       objective: >
-        The era of Large Language Models (LLM) has come and with the hype and the current power of
+        The era of <b>Large Language Models (LLM)</b> has come and with the hype and the current power of
         innovation comes a huge flood of new developments both in proprietary context as well as in the
-        open source world. To be able to always be up to date and to deliver state of the art solutions
-        as a Machine Learning Engineer / Data Scientist, it is necessary to quickly understand whether a paper
-        is relevant, understand the content of the paper, and be able to look up certain facts quickly.
-        In the sense of the saying "fight fire with fire", let's use LLMs to understand LLMs (wink emoji).
+        open source world. To be able to always be up to date and to deliver <b>state of the art solutions</b>
+        as a <b>Machine Learning Engineer / Data Scientist</b>, it is necessary to <b>quickly understand</b> whether 
+        a <b>paper</b> is relevant, understand the content of the paper, and be able to look up certain facts quickly.
+        In the sense of the saying "fight fire with fire", let's use LLMs to understand LLMs.
       approach: >
-        The crux is to intelligently incorporate the available context information like a specific or even
-        multiple paper(s) into an LLM`s text generation. The context has to be chunked into processable units,
-        relevant context has to be selected, and we have to ensure that the answer is fact-based and not
+        The crux is to <b>intelligently incorporate</b> the available <b>context information</b> like a specific or even
+        multiple paper(s) into an LLM's text generation. The context has to be chunked into processable units,
+        relevant context has to be selected, and we have to ensure that the answer is <b>fact-based</b> and not
         hallucinated by the LLM.
-        To achieve this, I decided to use deepset's GenerativeQAPipeline along with an OpenAIAnswerGenerator.
+        To achieve this, I decided to use <b>deepset's GenerativeQAPipeline</b> along with an <b>OpenAIAnswerGenerator</b>.
         There are other LLM pipelining tool's like LangChain, however, for this project I decided to go for 
-        deepset as I have used it before and save LangChain for my next project. Using FAISS,
-        my sentence level chunked papers will be embedded and stored in a vector database. This allows to retrieve
+        deepset as I have used it before and save LangChain for my next project. Using <b>FAISS</b>,
+        my sentence level chunked papers will be embedded and stored in a <b>vector database</b>. This allows to retrieve
         relevant context using cosine similiarity between the embedded query vector and the respective context
         vectors. There are still adjustments to be implement to ensure factual correctness and further improve
-        the context retrieval, but my streamlit app that also displays the retrieved context matches enables the
+        the context retrieval, but my <b>streamlit app</b> that also displays the retrieved context matches enables the
         user to perform sanity checks on the answer or even look up the actual text paragraphs in the original paper.
-      result: The streamlit app including terraform IaC for deployment on AWS can be found in the linked GitHub repo.
+      result: The <b>streamlit</b> app including <b>terraform</b> IaC for deployment on <b>AWS</b> can be found in the linked GitHub repo.
       deployment: AWS ECR + ECS incl. custom domain on AWS Route 53 and AWS Cognito authorization
     categories:
       - Web Application
@@ -202,18 +205,18 @@ projects:
     description:
       industry: Legal Tech
       objective: >
-        If a lawyer wants to appeal for a verdict, they have to provide reasons in a statement of appeal.
+        If a lawyer wants to appeal for a verdict, they have to provide reasons in a <b>statement of appeal</b>.
         To do so, the critical text passages in the verdict have to be identified and the statement has to be written.
-        This can be a time consuming task as the verdicts are often very complex and long texts. The goal of
-        the project was to decrease the manual effort necesary by increasing the level of automation
+        This can be a <b>time consuming</b> task as the verdicts are often very complex and long texts. The <b>goal</b> of
+        the project was to <b>decrease</b> the <b>manual effort</b> necesary by <b>increasing</b> the <b>level of automation</b>.
       approach: >
-        The idea was to first identify relevant text passages in the input verdict using regex.
-        Then I implemented a prompt chain, i.e. a multi stage ChatGPT prompting approach to first analyse the verdict
-        regarding critical text passages through well designed prompt engineering and, based on the analysis, summarize
+        The idea was to first <b>identify relevant text passages</b> in the input verdict using regex.
+        Then I implemented a <b>prompt chain</b>, i.e. a <b>multi stage ChatGPT prompting approach</b> to first analyse the verdict
+        regarding critical text passages through well designed <b>prompt engineering</b> and, based on the analysis, summarize
         the findings to formulate fitting statements of appeal.
       result: >
-        Results are generated once a verdict arrives so that the app loads the pre generated results to enable
-        the user to quickly fact check the analysis summary to approve the statement of appeal.
+        Results are generated once a verdict arrives so that the app loads the <b>pre-generated results</b> to enable
+        the user to quickly <b>fact check the analysis summary</b> to approve the statement of appeal.
       deployment: AWS ECR + ECS incl. custom domain on AWS Route 53 and AWS Cognito authorization
     categories:
       - Web Application
@@ -243,19 +246,19 @@ projects:
     description:
       industry: Legal Tech
       objective: >
-        The primary objective of this project was to establish a comprehensive pipeline for training, 
-        evaluating, deploying, and monitoring information extraction models. 
-        Within the context of the legal domain, the focus was on implementing Named Entity Recognition (NER) 
+        The primary objective of this project was to establish a <b>comprehensive pipeline for training, 
+        evaluating, deploying, and monitoring information extraction models</b>. 
+        Within the context of the legal domain, the focus was on implementing <b>Named Entity Recognition (NER)</b> 
         techniques to accurately extract crucial details from various forms of correspondence, 
         including those from clients, courts, and insurance entities.
       approach: >
-        Leveraging cutting-edge technology, I employed transformers-based architectures and devised a BiLSTM-CRF 
-        ensemble model approach. This amalgamation allowed for enhanced contextual understanding and 
+        Leveraging cutting-edge technology, I employed <b>transformers-based architectures</b> and devised a <b>BiLSTM-CRF 
+        ensemble model approach</b>. This amalgamation allowed for enhanced contextual understanding and 
         robust entity recognition. The ensemble method aimed to leverage the strengths of both 
         architectures to attain more accurate NER outcomes.
-        To achieve optimal results, extensive experiments were carried out. Model training experiments were 
-        executed on Sagemaker, harnessing its scalability and efficiency. The training process was managed 
-        through MLflow, allowing for systematic tracking of experiments, facilitating transparency, 
+        To achieve optimal results, extensive experiments were carried out. <b>Model training experiments</b> were 
+        executed on <b>Sagemaker</b>, harnessing its scalability and efficiency. The training process was managed 
+        through <b>MLflow</b>, allowing for systematic tracking of experiments, facilitating transparency, 
         reproducibility, and informed decision-making.
       deployment: AWS Lambda + AWS SNS / SQS
     categories:
@@ -278,20 +281,20 @@ projects:
     description:
       industry: Legal Tech
       objective: >
-        Input and output management for correspondence with clients, insurers, and courts constitutes 
-        a significant cost factor for legal professionals and law firms in Germany. 
-        The initial stride towards automating incoming correspondence involves the automatic identification 
-        of document types, enabling subsequent <b>document-specific</b> processes to be executed flawlessly and 
-        efficiently. The objective of the project was thus to achieve a highly precise machine 
-        learning-based classification of a substantial volume of incoming documents.
+        <b>Input and output management</b> for correspondence with clients, insurers, and courts constitutes 
+        a <b>significant</b> cost factor for legal professionals and law firms in Germany. 
+        The initial stride towards automating incoming correspondence involves the <b>automatic identification 
+        of document types</b>, enabling subsequent document-specific processes to be executed flawlessly and 
+        efficiently. The objective of the project was thus to achieve a <b>highly precise machine 
+        learning-based classification</b> of a <b>substantial volume of incoming documents</b>.
       approach: >
         Certain subsets of document types were received through specific channels, thus to enhance the 
-        accuracy of classification outcomes, channel-specific models were trained. In addition to 
-        state-of-the-art transformer architectures, simpler document embedding-based baseline models 
+        accuracy of classification outcomes, <b>channel-specific models</b> were trained. In addition to 
+        <b>state-of-the-art transformer</b> architectures, <b>simpler document embedding-based baseline models</b> 
         were employed. Among these baseline models, one model prevailed over the transformer models 
         due to factors such as training and inference time, model size, and performance. The training 
-        experiments were conducted using Sagemaker and tracked within MLflow.
-      result: 95% accuracy with an automation rate of 80 % of 500,000+ documents
+        experiments were conducted using <b>Sagemaker</b> and tracked within <b>MLflow</b>.
+      result: <b>95% accuracy</b> with an <b>automation rate of 80%</b> of 500,000+ documents
       deployment: AWS Lambda + AWS SNS / SQS
     categories:
       - Machine Learning
