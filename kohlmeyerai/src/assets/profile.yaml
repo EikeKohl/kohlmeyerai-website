@@ -45,6 +45,7 @@ experience:
     description: kohlmeyer-ai.com
   - title: Machine Learning Engineer
     company: SCAILEX GmbH
+    logo: scailex.png
     location: Munich, Germany
     start: Dec 2021
     end: Aug 2023
@@ -55,6 +56,7 @@ experience:
       the "Projects" section for relevant projects and technologies used.
   - title: Data Scientist
     company: Atruvia AG
+    logo: atruvia.png
     location: Munich, Germany
     start: Dec 2020
     end: Nov 2021
@@ -64,12 +66,14 @@ experience:
       "Projects" section for relevant projects and technologies used.
   - title: Auditor Banks & Asset Management
     company: KPMG AG
+    logo: kpmg.png
     location: Zurich, Switzerland
     start: Oct 2018
     end: Dec 2018
     description: ""
   - title: Trainee Audit Asset Management
     company: KPMG Société coopérative
+    logo: kpmg.png
     location: Luxembourg, Luxembourg
     start: Feb 2018
     end: Aug 2018

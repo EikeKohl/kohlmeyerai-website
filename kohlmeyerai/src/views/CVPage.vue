@@ -50,7 +50,15 @@ import BaseLayout from "@/layouts/default/BaseLayout";
               </template>
               <template #default>
                 <v-card class="timeline-card" elevation="7">
-                  <v-card-title>{{ exp.title }}</v-card-title>
+                  <v-row>
+                    <v-col cols="9">
+                      <v-card-title>{{ exp.title }}</v-card-title>
+                    </v-col>
+                    <v-col cols="3">
+                      <v-img width="100" height="50" :src="exp.logo" />
+                    </v-col>
+                  </v-row>
+
                   <v-card-subtitle
                     >{{ exp.company }} - {{ exp.location }}</v-card-subtitle
                   >

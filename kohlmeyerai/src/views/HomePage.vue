@@ -44,7 +44,7 @@ import { openLink } from "@/utils";
 
     <v-container class="my-8" fluid>
       <v-row justify="center">
-        <v-card rounded max-width="1000" elevation="7">
+        <v-card rounded max-width="1000" elevation="7" class="text-center">
           <v-carousel
             cycle
             hide-delimiter-background
@@ -54,6 +54,7 @@ import { openLink } from "@/utils";
             style="padding: 20px"
             hide-delimiters
           >
+            <v-card-subtitle>Recommendations</v-card-subtitle>
             <v-carousel-item
               v-for="(recommendation, index) in profile.recommendations"
               :key="index"
