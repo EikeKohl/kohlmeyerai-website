@@ -30,7 +30,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
     </v-container>
     <v-container class="py-6">
       <v-row>
-        <v-col xs="12" md="8" lg="8" sm="12">
+        <v-col xs="12" md="12" lg="8" sm="12">
           <v-timeline side="end">
             <!-- Experience section -->
             <v-timeline-item hide-dot="true">
@@ -95,7 +95,7 @@ import BaseLayout from "@/layouts/default/BaseLayout";
             </v-timeline-item>
           </v-timeline>
         </v-col>
-        <v-col xs="12" md="4" lg="4" sm="12">
+        <v-col xs="12" md="12" lg="4" sm="12">
           <!-- Skills section -->
           <h2 class="headline mb-4">Technologies</h2>
           <v-chip-group>

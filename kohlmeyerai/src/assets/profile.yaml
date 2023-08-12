@@ -139,12 +139,12 @@ projects:
       - Machine Learning
     techStack:
       - AWS
-      - Huggingface
-      - PyTorch
-      - DeepSpeed
-      - OpenAI
       - AWS Sagemaker
       - Azure
+      - DeepSpeed
+      - Huggingface
+      - OpenAI
+      - PyTorch
     duration: 3 months
     image: ai-lawyer.png
   - title: Paper Q&A Web Application
@@ -183,17 +183,19 @@ projects:
       - Retrieval Augmented Generation
       - CICD
     techStack:
-      - HuggingFace
-      - Streamlit
-      - OpenAI
+      - AWS
+      - AWS Cloudfront
+      - AWS Cognito
+      - AWS EC2
+      - AWS ECR
+      - AWS ECS
       - Azure
       - Deepset
       - HayStack
+      - Huggingface
+      - OpenAI
+      - Streamlit
       - Terraform
-      - AWS Cloudfront
-      - AWS EC2
-      - AWS ECR
-      - AWS Cognito
     duration: 3 days
     githubLink: https://github.com/EikeKohl/paperqa-web-app
     mediumLink: https://medium.com/@EKohlmeyer/deploying-a-streamlit-web-app-on-aws-with-authentication-using-aws-cognito-a-comprehensive-guide-1da9e7ae4726
@@ -226,17 +228,19 @@ projects:
       - CICD
       - Prompt Engineering
     techStack:
-      - HuggingFace
-      - Streamlit
-      - OpenAI
-      - Azure
-      - LangChain
-      - HayStack
-      - Terraform
+      - AWS
       - AWS Cloudfront
+      - AWS Cognito
       - AWS EC2
       - AWS ECR
-      - AWS Cognito
+      - AWS ECS
+      - Azure
+      - HayStack
+      - Huggingface
+      - LangChain
+      - OpenAI
+      - Streamlit
+      - Terraform
     duration: 3 months
     image: information-retrieval.png
   - title: Information Extraction
@@ -266,12 +270,13 @@ projects:
       - CICD
       - MLOps
     techStack:
-      - Huggingface
-      - PyTorch
+      - AWS
       - AWS Lambda
-      - MLflow
       - AWS Sagemaker
       - GitLab
+      - Huggingface
+      - MLflow
+      - PyTorch
     duration: 1.5 years
     image: information-extraction.png
   - title: Document Classification
@@ -301,16 +306,27 @@ projects:
       - CICD
       - MLOps
     techStack:
-      - Huggingface
-      - PyTorch
+      - AWS
       - AWS Lambda
-      - MLflow
       - AWS Sagemaker
       - GitLab
+      - Huggingface
+      - MLflow
+      - PyTorch
     duration: 1.5 years
     image: document-classification.png
 
 recommendations:
+  - name: Carlo Bachheibl
+    title: CTO, SCAILEX GmbH
+    relation: Employer
+    text: >-
+      Eike is a highly solution-oriented and structured AI developer with excellent industry knowledge 
+      and extensive hands-on experience. His tasks primarily included data preparation, model training, 
+      and NLP based automation. Of particular note is his research and prototype development of a German 
+      LLM using RLHF in a multi-node, multi-GPU environment. In addition, Eike has successfully implemented 
+      MLOps and CICD for machine learning components in an AWS production environment. His expertise and 
+      practical approach make him a valuable asset to any AI team or AI project.
   - name: LinkedIn Member
     title: Senior Machine Learning Engineer
     relation: Former Team Colleague
