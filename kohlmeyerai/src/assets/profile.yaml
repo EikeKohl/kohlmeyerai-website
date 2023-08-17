@@ -327,8 +327,22 @@ recommendations:
       LLM using RLHF in a multi-node, multi-GPU environment. In addition, Eike has successfully implemented 
       MLOps and CICD for machine learning components in an AWS production environment. His expertise and 
       practical approach make him a valuable asset to any AI team or AI project.
+  - name: Paul Grillenberger
+    title: Lead Backend Engineer Machine Learning, SCAILEX GmbH
+    relation: Team Colleague
+    text: >-
+      I had the pleasure of working with Eike on several complex projects at Scailex involving Cloud Architectures, 
+      MLOps, Machine Learning in general, and CI/CD automations. While his Machine Learning skills 
+      (NLP, distributed trainings in AWS and Azure alike, productionizing and deploying models -- 
+      just to name a few selected ones) are broadly applicable and, thus, attractive to any employer or 
+      partner he works with, I'd like to emphasize that Eike is truly deserving of the "Engineer" in 
+      "Machine Learning Engineer". He takes responsibility and pride in making data preparation, trainings 
+      and ML experiments reproducible using Software Engineering practices and he has the trifecta of ability, 
+      motivation and dedication to learn and implement these practices swiftly and to automate them. I have no 
+      doubt that this skillset will make him successful as a freelancer as well and can only recommend working 
+      with him - especially if you want an AI solution that's fast, scalable and reproducible.
   - name: LinkedIn Member
-    title: Senior Machine Learning Engineer
+    title: Senior Machine Learning Engineer, SCAILEX GmbH
     relation: Former Team Colleague
     text: >-
       I had the privilege of working alongside Eike on several challenging machine learning projects, 
@@ -340,7 +354,7 @@ recommendations:
       effective communication skills greatly contributed to the success of our projects. 
       It was a pleasure working with Eike.
   - name: Rail Chamidullin
-    title: Machine Learning Engineer
+    title: Machine Learning Engineer, SCAILEX GmbH
     relation: Former Team Colleague
     text: >-
       I worked with Eike on Machine Learning projects at SCAILEX (legal tech). 

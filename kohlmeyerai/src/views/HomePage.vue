@@ -49,7 +49,7 @@ import { openLink } from "@/utils";
             cycle
             hide-delimiter-background
             show-arrows="hover"
-            interval="5000"
+            interval="10000"
             class="fill-height"
             style="padding: 20px"
             hide-delimiters
